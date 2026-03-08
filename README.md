@@ -38,8 +38,6 @@ This repository is intended for authorized security assessments, red-team engage
 - `LICENSE` — license file (e.g., MIT).
 - `requirements.txt` — (optional) list of Python dependencies.
 
-Adjust paths/names to match how you actually structure the repo.
-
 ---
 
 ## Requirements
@@ -48,7 +46,7 @@ Adjust paths/names to match how you actually structure the repo.
 - Optional / suggested Python packages:
   - impacket
   - joblib (optional — required to load an ML artifact)
-  - scikit-learn (if the model artifact uses sklearn objects)
+  - scikit-learn==1.8.0 (if the model artifact uses sklearn objects)
 - The NXC runtime environment that provides `nxc.protocols.smb.remotefile`, `nxc.paths.NXC_PATH`, and `nxc.helpers.misc.CATEGORY` (if integrating as an NXC module).
 
 Example installation (system-wide or venv):
