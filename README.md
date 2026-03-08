@@ -1,5 +1,9 @@
 # SleuthCred
 
+<p align="center">
+  <img src="assets/logo.png" alt="SleuthCred logo" width="320"/>
+</p>
+
 SleuthCred is a toolkit for scanning SMB shares to detect potential credentials and secrets, and optionally enriching matches with a lightweight machine-learning based detector. It combines categorized regex-based detection with contextual enrichment and scan statistics to help reduce false positives and prioritize findings.
 
 This repository is intended for authorized security assessments, red-team engagements, and defensive research. Do not run it against systems you do not own or do not have explicit permission to test.
