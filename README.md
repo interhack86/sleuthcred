@@ -33,7 +33,7 @@ This repository is intended for authorized security assessments, red-team engage
 ## Repository structure (typical)
 
 - `modules/search_passwords.py` — NXC module that implements `SMBCredentialSearcher` and integrates scanning logic.
-- `model/nxc_credential_detector.py` — Lightweight enricher/classifier that provides `enrich_match(...)`. Optionally loads a joblib model artifact (`MODEL_PATH`).
+- `detector/nxc_credential_detector.py` — Lightweight enricher/classifier that provides `enrich_match(...)`. Optionally loads a joblib model artifact (`MODEL_PATH`).
 - `README.md` — this file.
 - `LICENSE` — license file (e.g., MIT).
 - `requirements.txt` — (optional) list of Python dependencies.
