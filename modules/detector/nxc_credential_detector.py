@@ -12,7 +12,6 @@ from collections import Counter
 try:
     import joblib
     HAS_JOBLIB = True
-    #print('todo correcto')
 except ImportError:
     HAS_JOBLIB = False
     print("[!] joblib no disponible. Instalar con: pip install joblib")
