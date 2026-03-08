@@ -21,7 +21,7 @@ from nxc.helpers.misc import CATEGORY
 # the original lightweight match structure.
 try:
     sys.path.insert(0, "/root/.nxc/modules")
-    from model.nxc_credential_detector import enrich_match
+    from detector.nxc_credential_detector import enrich_match
     #enrich_match = None
 except Exception:
     enrich_match = None
