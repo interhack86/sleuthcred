@@ -33,7 +33,7 @@ This repository is intended for authorized security assessments, red-team engage
 ## Repository structure (typical)
 
 - `modules/search_passwords.py` — NXC module that implements `SMBCredentialSearcher` and integrates scanning logic.
-- `detector/nxc_credential_detector.py` — Lightweight enricher/classifier that provides `enrich_match(...)`. Optionally loads a joblib model artifact (`MODEL_PATH`).
+- `modules/detector/nxc_credential_detector.py` — Lightweight enricher/classifier that provides `enrich_match(...)`. Optionally loads a joblib model artifact (`MODEL_PATH`).
 - `README.md` — this file.
 - `LICENSE` — license file (e.g., MIT).
 - `requirements.txt` — (optional) list of Python dependencies.
@@ -136,12 +136,12 @@ When executed, the module will:
 The enricher script supports a simple CLI mode for local testing. Use it by piping file content and providing the required arguments:
 
 ```bash
-cat somefile.txt | python detector/nxc_credential_detector.py <category> <pattern_name> <token> <share> <filepath>
+cat somefile.txt | python modules/detector/nxc_credential_detector.py <category> <pattern_name> <token> <share> <filepath>
 ```
 
 Example:
 ```bash
-echo "password=mySecret123" | python detector/nxc_credential_detector.py generic password mySecret123 SHARE path/to/file
+echo "password=mySecret123" | python modules/detector/nxc_credential_detector.py generic password mySecret123 SHARE path/to/file
 ```
 
 This prints a JSON enriched match object to stdout.
