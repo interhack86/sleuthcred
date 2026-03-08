@@ -1,0 +1,3 @@
+impacket
+joblib
+scikit-learn==1.8.0
