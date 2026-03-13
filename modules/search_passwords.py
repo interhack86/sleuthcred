@@ -19,12 +19,16 @@ from nxc.helpers.misc import CATEGORY
 
 # Try to import the enricher. If not present, the module will continue to work using
 # the original lightweight match structure.
+nxc_modules_path = os.path.expanduser("~/.nxc/modules")
+
 try:
-    sys.path.insert(0, "/root/.nxc/modules")
+    if nxc_modules_path not in sys.path:
+        sys.path.insert(0, nxc_modules_path)
+
     from detector.nxc_credential_detector import enrich_match
-    #enrich_match = None
 except Exception:
     enrich_match = None
+
 
 # =============================================================================
 # CONFIGURATION - Modify this variable as needed

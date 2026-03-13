@@ -90,8 +90,7 @@ pip install .
 4. Deploy to NetExec:
 Copy the module and the detector to your local NetExec configuration directory:
 ```bash
-cp modules/search_passwords.py ~/.nxc/modules/
-cp modules/detector/nxc_credential_detector.py ~/.nxc/modules/detector/
+cp -R modules/* ~/.nxc/modules/
 ```
 
 ---
